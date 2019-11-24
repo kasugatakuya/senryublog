@@ -1,0 +1,44 @@
+.head {
+  background: black;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Times New Roman", "游明朝", YuMincho,"ヒラギノ明朝 Pr6 W6","Hiragino Mincho Pro", "HGS明朝E","メイリオ", "ＭＳ Ｐ明朝","MS PMincho",Meiryo, serif;
+  border-bottom: 1px solid white;
+  .title {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .icon {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    .icon1 {
+      border: 1px solid white;
+      padding: 0 20px;
+      margin: 10px 20px;
+    }
+    .icon2 {
+      border: 1px solid white;
+      padding: 0 20px;
+      margin: 10px 20px;
+    }
+  }
+}
+
+.sidehead {
+  background: black;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  top: 51px;
+  .menu {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2px;
+  }
+}
