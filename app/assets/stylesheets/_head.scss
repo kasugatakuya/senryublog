@@ -8,9 +8,10 @@
   font-family: "Times New Roman", "游明朝", YuMincho,"ヒラギノ明朝 Pr6 W6","Hiragino Mincho Pro", "HGS明朝E","メイリオ", "ＭＳ Ｐ明朝","MS PMincho",Meiryo, serif;
   border-bottom: 1px solid white;
   .title {
+    display: flex;
     color: white;
-    font-size: 20px;
     margin-top: 10px;
+    font-size: 20px;
   }
   .icon {
     color: white;

@@ -1,9 +1,10 @@
 .head
   .title
-    川柳縛り
+    川柳縛り  
   .icon
     .icon1
-      ログイン
+      = link_to edit_user_path(current_user) do
+        = current_user.name
     .icon2
       新規登録
 
