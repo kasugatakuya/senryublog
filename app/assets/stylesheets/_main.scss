@@ -1,20 +1,25 @@
 .main {
-  padding-top: 90px;
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/pp_hamon_TP_V.jpg);
+  height: calc(100vh - 81px);
+  padding-top: 81px;
   text-align: center;
   .maintitle {
+    padding-top: 10px;
     font-style: bold;
     font-size: 30px;
   }
   .contents {
+    background: white;
     border: 2px solid silver;
     border-radius: 4px;   
-    padding: 0 20px;
-    margin: 10px 50px;
+    margin: 20px 250px;
     .content {
-      border-bottom: 2px solid silver;
       border-radius: 4px;   
-      margin: 10px 70px;
       font-size: 25px;
+    }
+    .date {
+      font-size: 5px;
+      border-bottom: 2px solid silver;
     }
     .text {
       font-size: 20px;
