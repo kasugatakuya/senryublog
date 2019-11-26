@@ -2,15 +2,17 @@
   = render "posts/head"
 
 .messages
+  .messages_title
+    = @post.text
   .message
     - @messages.each do |message|
       .upper-message
+        .lower-message
+          = message.content
         .upper-message__user-name
           = message.user.name
         .upper-message__date
           = message.created_at.strftime("%Y/%m/%d %H:%M")
-      .lower-message
-        = message.content
       
 
 

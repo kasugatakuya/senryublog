@@ -1,28 +1,31 @@
 .messages {
-  background-color: #FAFAFA;
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/pp_hamon_TP_V.jpg);
   box-sizing: border-box;
   padding: 100px 40px 0;
   height: calc(100% - 100px - 90px);
+  text-align: center;
+  &_title{
+    font-size: 30px;
+  }
   .message {
     .upper-message {
-      display: flex;
+      background: white;
+      border: 2px solid silver;
+      border-radius: 4px;   
+      margin: 20px 250px;
+      .lower-message {
+        margin-top: 10px;
+        color: black;
+        font-size: 20px;
+        }
       &__user-name {
         color: black;
-        font-size: 16px;
+        font-size: 5px;
         font-weight: bold;
       }
       &__date {
-        color: light_gray;
-        font-size: 12px;
-        padding-left: 10px;
-      }
-    }
-    .lower-message {
-      margin-top: 10px;
-      &__content {
-        color: black;
-        font-size: 14px;
-        margin-bottom: 40px;
+        color: silver;
+        font-size: 5px;
       }
     }
   }
