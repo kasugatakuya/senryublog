@@ -7,7 +7,7 @@
 |username|string|null: false|
 ### Association
 - has_many :posts
-- has_many :comments
+- has_many :messages
 
 ## postsテーブル
 |Column|Type|Options|
@@ -16,9 +16,9 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
+- has_many :messages
 
-## commentsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|

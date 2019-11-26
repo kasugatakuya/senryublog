@@ -3,12 +3,13 @@
     お題一覧
     - @posts.each do |post|
       .contents
-        .content 
-          = post.text   
-        .date
-          = post.created_at  
-        .text  
-          OK
+        = link_to  post_messages_path(post) do
+          .content 
+            = post.text
+          .date
+            = post.created_at  
+          .text  
+            OK
 
         
       

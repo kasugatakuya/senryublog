@@ -1,18 +1,17 @@
 .head
   .title
-    川柳縛り  
+    = link_to "川柳縛り", root_path(current_user), class: 'btn'
   .icon
     .icon1
       = link_to edit_user_path(current_user) do
-        %div.link= current_user.name
+        %div.btn= current_user.name
     .icon2
-      = link_to new_post_path(current_user) do
-        お題投稿
+      = link_to "お題投稿", new_post_path(current_user), class: 'btn'
 
 .sidehead
   .menu
     .menu1
-      お題一覧
+      = link_to "お題一覧", root_path, class: 'btn'
     .menu2
       今日の川柳
     .menu3

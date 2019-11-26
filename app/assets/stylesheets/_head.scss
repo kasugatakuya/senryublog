@@ -13,6 +13,10 @@
     margin-top: 10px;
     font-size: 20px;
     padding: 0 10px;
+    .btn {
+      text-decoration: none;
+      color: white;
+    }
   }
   .icon {
     color: white;
@@ -22,7 +26,7 @@
       border: 1px solid white;
       padding: 0 20px;
       margin: 10px 20px;
-      .link {
+      .btn {
         color: white;
       }
     }
@@ -30,6 +34,10 @@
       border: 1px solid white;
       padding: 0 20px;
       margin: 10px 20px;
+      .btn {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }
@@ -45,5 +53,9 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 2px;
+    .btn {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
