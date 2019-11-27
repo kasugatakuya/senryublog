@@ -9,7 +9,10 @@ class MessagesController < ApplicationController
   def create
     @message = @post.messages.new(message_params)
     if @message.save
-      redirect_to post_messages_path(@post)
+      respond_to do |format|
+        format.html { redirect_to "post_messages_path(params[:message_id])" }
+        format.json
+      end
     else
       @messages = @post.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
