@@ -13,11 +13,12 @@
           = message.user.name
         .upper-message__date
           = message.created_at.strftime("%Y/%m/%d %H:%M")
+        
       
 
 
 
 .form
   = form_for [@post, @message] do |f|
-    = f.text_field :content, class: 'form__message', placeholder: '入力してね'
+    = f.text_field :content, class: 'form__message', placeholder: '5・7・5で入力してね'
     = f.submit '送信', class: 'form__submit'
