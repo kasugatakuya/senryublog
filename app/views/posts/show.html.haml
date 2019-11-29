@@ -9,8 +9,9 @@
     = button_to 'いいね', post_likes_path(@post) 
   .iineuser 
     いいねしたユーザー
-    - @post.liked_users.each do |user|
-      %li= user.name
+  - @post.liked_users.each do |user|
+    = user.name
+  .home
     = link_to "ホームへ戻る", posts_path 
 
 
