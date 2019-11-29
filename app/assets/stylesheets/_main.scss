@@ -2,6 +2,7 @@
   background-image: url(https://www.pakutaso.com/shared/img/thumb/pp_hamon_TP_V.jpg);
   padding-top: 81px;
   text-align: center;
+  height: 100%;
   .maintitle {
     padding-top: 10px;
     font-style: bold;
@@ -11,7 +12,8 @@
     background: white;
     border: 2px solid silver;
     border-radius: 4px;   
-    margin: 20px 250px;
+    margin: 0 250px;
+    margin-top: 20px;
     .content {
       border-radius: 4px;   
       font-size: 25px;

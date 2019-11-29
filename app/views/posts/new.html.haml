@@ -2,7 +2,7 @@
   = render "head"
 
 .content-title
-  新規記事の作成
+  お題の作成
   = form_for(@post) do |f|
     = f.text_field :text
-    = f.submit '投稿する', class: :form__btn
+    = f.submit '投稿する', class: 'toko'
