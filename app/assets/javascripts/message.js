@@ -37,6 +37,7 @@ $(function(){
     })
     .fail(function(){
       console.log("失敗");
+      alert("5・7・5で入力してね")
     })
     return false;
   })

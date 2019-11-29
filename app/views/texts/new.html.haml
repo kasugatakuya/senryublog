@@ -1,0 +1,10 @@
+.wrapper
+  = render "posts/head"
+
+.today-main
+  今日の川柳
+  .today-menu
+    投稿画面
+    = form_for(@text) do |f|
+      = f.text_field :text, class: 'text-box'
+      = f.submit '投稿する', class: 'toko'

@@ -11,23 +11,49 @@
 
 
 .sidehead
-  .menu
-    .menu1
-      = link_to "お題一覧", root_path, class: 'btn'
-    .menu2
-      ランキング
-    .menu3
-      今日の川柳
-    .menu4
-      川柳チャット
-    .ok
-      %ul.dropdwn
+  %ul.dropdwn
+    %li
+      お題
+      %ul.dropdwn_menu
         %li
-          = current_user.name
-          %ul.dropdwn_menu
-            %li
-              %a{:href => "#"} 
-                = link_to "編集", edit_user_path(current_user), class: 'btn'
-            %li
-              %a{:href => "#"} 
-                = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+          %a{:href => "#"} 
+            = link_to "一覧表示", root_path, class: 'btn'
+        %li
+          %a{:href => "#"} 
+            = link_to "お題投稿", new_post_path(current_user), class: 'btn'
+    %li
+      今日の川柳
+      %ul.dropdwn_menu
+        %li
+          %a{:href => "#"} 
+            = link_to "一覧表示",texts_path(current_user), class: 'btn'
+        %li
+          %a{:href => "#"} 
+            = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
+      %li
+        ランキング
+        %ul.dropdwn_menu
+          %li
+            %a{:href => "#"} 
+              = link_to "編集", edit_user_path(current_user), class: 'btn'
+          %li
+            %a{:href => "#"} 
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      %li
+        川柳チャット
+        %ul.dropdwn_menu
+          %li
+            %a{:href => "#"} 
+              = link_to "編集", edit_user_path(current_user), class: 'btn'
+          %li
+            %a{:href => "#"} 
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      %li
+        = current_user.name
+        %ul.dropdwn_menu
+          %li
+            %a{:href => "#"} 
+              = link_to "編集", edit_user_path(current_user), class: 'btn'
+          %li
+            %a{:href => "#"} 
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'

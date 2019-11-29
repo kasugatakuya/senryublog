@@ -1,0 +1,18 @@
+.wrapper
+  = render "posts/head"
+
+.today
+  .today__title
+    今日の川柳
+  .today__senryu
+    = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
+  .today__text
+    - @texts.each do |text|
+      .contents
+        .content 
+          = text.text
+        .date
+          = text.created_at  
+
+
+  

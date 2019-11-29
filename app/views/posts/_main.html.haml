@@ -6,6 +6,8 @@
       .contents
         .content 
           = post.text
+        .post-message
+          = post.show_last_message
         .date
           = post.created_at  
         .coment
@@ -14,8 +16,7 @@
           = link_to "いいね数", post_path(post)
         .like
           = post.liked_users.count
-        .delete
-          = link_to '削除', "/posts/#{post.id}", method: :delete
+      
 
 
           

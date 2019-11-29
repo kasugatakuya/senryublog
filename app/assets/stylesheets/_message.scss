@@ -1,6 +1,8 @@
 .messages {
   background-image: url(https://www.pakutaso.com/shared/img/thumb/pp_hamon_TP_V.jpg);
+  background-attachment: fixed;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 100px 40px 0;
   height: calc(100% - 100px - 90px);
   text-align: center;
@@ -12,6 +14,7 @@
   .message {
     .upper-message {
       background: white;
+      opacity: 85%;
       border: 2px solid silver;
       border-radius: 4px;   
       margin: 20px 250px;
@@ -41,20 +44,14 @@
   height: 90px;
   padding: 20px 50px 20px 40px;
   width: 100%;
-  &__message {
-    border: none;
-    float: left;
-    height: 50px;
-    width: calc(100% - 150px);
-    padding: 0 15px;
-  }
-  &__mask {
-    background-color: white;
-    float: left;
-    height: 50px;
-    padding-right: 10px;
-    .hidden {
-      display: none;
+  &__message{
+    display: flex;
+    &__text {
+      border: none;
+      height: 50px;
+      padding: 0 10px;
+      width: 100%;
+      margin: 0 10px;
     }
   }
   &__submit {

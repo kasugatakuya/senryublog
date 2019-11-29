@@ -1,0 +1,66 @@
+//index.html.hamlのscss
+.today {
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/PAK93_aozoraninobirusakura20140405_TP_V.jpg);
+  background-attachment: fixed;
+  padding-top: 100px;
+  text-align: center;
+  height: 100%;
+  &__title {
+    font-size: 40px;
+  }
+  &__senryu {
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    a{
+      text-decoration: none;
+      color:black;
+      border: 3px solid black;
+      padding: 5px 20px;
+      margin: 20px 20px;
+      font-style: bold;
+    }
+  }    
+  &__text{
+    .contents {
+      background: white;
+      opacity: 85%;
+      border: 2px solid silver;
+      border-radius: 4px;   
+      margin: 0 250px;
+      margin-top: 20px;
+      .content {
+        border-radius: 4px;   
+        font-size: 25px;
+        border-bottom: 2px solid silver;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//new.html.hamlのscss
+.today-main { 
+  padding-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+  .today-menu {
+    font-size: 30px;
+    margin-top: 10px;
+    .text-box {
+      width: 500px;
+    }
+  }
+
+}

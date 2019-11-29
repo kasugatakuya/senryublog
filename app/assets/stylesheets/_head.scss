@@ -7,6 +7,7 @@
   justify-content: space-between;
   font-family: "Times New Roman", "游明朝", YuMincho,"ヒラギノ明朝 Pr6 W6","Hiragino Mincho Pro", "HGS明朝E","メイリオ", "ＭＳ Ｐ明朝","MS PMincho",Meiryo, serif;
   border-bottom: 1px solid white;
+  z-index: 2;
   .title {
     display: flex;
     color: white;
@@ -44,50 +45,47 @@
   }
 }
 
-.sidehead {
-  background: black;
-  height: 30px;
-  width: 100%;
-  position: fixed;
-  top: 51px;
-  .menu {
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 2px;
-    .btn {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
 
 .dropdwn{
+  z-index: 1;
+  position: fixed;
+  max-width: 1450px;
+  padding-top: 51px;
+  display: flex;
+  justify-content: space-evenly;
+  background: black;
 }
 
 ul{
   text-align: center;
   list-style-type: none;
   color: #fff;
-  width: 100%;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 0;
 }
 li{
+  max-width: calc(1450px/5);
   position: relative;
+  padding: 5px;
   display: block;
   cursor: pointer;
 }
 
 .dropdwn>li{
+  width: 1450px;
+  margin: 1px;
   background: black;
   display: inline;
 }
 
 .dropdwn_menu{
+  width: 100%;
   display: none;
   position: absolute;
+  margin-left: -5px;
+  margin-top: 5px;
+  padding: 0;
   background: black;
-  width: 100%;
 }
 
 .dropdwn_menu li{
@@ -95,8 +93,8 @@ li{
 }
 
 .dropdwn_menu li a{
-  margin: -5px -10px;
-  padding: 5px 0;
+  padding: 2px 0;
+  margin: -5px 5px -5px -5px;
   display: block;
   color: #fff;
 }
@@ -104,4 +102,9 @@ li{
 li a:hover{
   background: #b3d7ff;
   color: rgb(65, 65, 65);
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
 }
