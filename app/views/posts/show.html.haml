@@ -1,48 +1,5 @@
-%ul.dropdwn
-  %li HOME
-  %li
-    A
-    %ul.dropdwn_menu
-      %li
-        %a{:href => "#"}  
-          = link_to "お題投稿", new_post_path(current_user), class: 'btn'
-      %li
-        %a{:href => "#"} 
-          = link_to "ログアウト", destroy_user_session_path(current_user), class: 'btn'
-  %li
-    B
-    %ul.dropdwn_menu
-      %li
-        %a{:href => "#"} B1
-      %li
-        %a{:href => "#"} B2
-      %li
-        %a{:href => "#"} B3
-  %li
-    C
-    %ul.dropdwn_menu
-      %li
-        %a{:href => "#"} C1
-      %li
-        %a{:href => "#"} C2
-      %li
-        %a{:href => "#"} C3
-      %li
-        %a{:href => "#"} C4
-  %li
-    D
-    %ul.dropdwn_menu
-      %li
-        %a{:href => "#"} D1
-      %li
-        %a{:href => "#"} D2
-      %li
-        %a{:href => "#"} D3
-      %li
-        %a{:href => "#"} D4
-      %li
-        %a{:href => "#"} D5
-
+.wrapper
+  = render "head"
 
 %p
   いいね件数: #{@post.likes.count}

@@ -7,6 +7,8 @@
         %div.btn= current_user.name
     .icon2
       = link_to "お題投稿", new_post_path(current_user), class: 'btn'
+    
+
 
 .sidehead
   .menu
@@ -18,4 +20,14 @@
       今日の川柳
     .menu4
       川柳チャット
-
+    .ok
+      %ul.dropdwn
+        %li
+          = current_user.name
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} 
+                = link_to "編集", edit_user_path(current_user), class: 'btn'
+            %li
+              %a{:href => "#"} 
+                = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
