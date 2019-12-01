@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    let html = `<div class="message">
+    let html = `<div class="message", data-message-id="${message.id}">
                   <div class="upper-message">
                   ${message.content}
                   </div>
@@ -8,7 +8,7 @@ $(function(){
                   ${message.user_name}
                   </div>
                   <div class="lower-message__date">
-                  ${message.date}
+                  ${message.created_at}
                   </div>
                 </div>`
     $('.messages').append(html); 
@@ -41,4 +41,27 @@ $(function(){
     })
     return false;
   })
+  let reloadMessages = function () {
+    if (window.location.href.match(/\/posts\/\d+\/messages/)){
+      let last_message_id = $('.message:last').data("message-id");
+      $.ajax({
+        url: "api/messages",
+        type: 'get',
+        dataType: 'json',
+        data: {last_id: last_message_id} 
+      })
+      .done(function(messages) {
+        let insertHTML = '';
+        messages.forEach(function (message) {
+          insertHTML = buildHTML(message); 
+          $('.messages').append(insertHTML);
+        })
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      })
+      .fail(function() {
+        console.log('error');
+      });
+    };
+  };
+setInterval(reloadMessages, 5000);
 });

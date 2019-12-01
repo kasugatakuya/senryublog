@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:new, :create, :edit, :update, :show, :index, :destroy] do
     resources :messages, only: [:index, :create, :destroy, :edit]
+    namespace :api do
+      resources :messages, only: :index, defaults: { format: 'json' }
+    end
     resources :likes, only: [:create, :destroy, :index]
   end
 
