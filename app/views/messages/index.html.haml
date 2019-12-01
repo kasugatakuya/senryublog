@@ -5,7 +5,7 @@
   .messages_title
     = @post.text
   - @messages.each do |message|
-    .message
+    .message{"data-message-id": "#{message.id}"}
       .upper-message
         = message.content
       .lower-message__user-name
