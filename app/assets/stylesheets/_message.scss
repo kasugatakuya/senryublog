@@ -10,18 +10,18 @@
     font-size: 30px;
   }
   .message {
+    background: white;
+    opacity: 85%;
+    border: 2px solid silver;
+    border-radius: 4px;   
+    margin: 20px 250px;
     .upper-message {
-      background: white;
-      opacity: 85%;
-      border: 2px solid silver;
-      border-radius: 4px;   
-      margin: 20px 250px;
-      .lower-message {
-        margin-top: 10px;
-        color: black;
-        font-size: 20px;
-        }
-      &__user-name {
+      margin-top: 10px;
+      color: black;
+      font-size: 20px;
+    }
+    &__lower-message {
+      &__username {
         color: black;
         font-size: 5px;
         font-weight: bold;

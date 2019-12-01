@@ -1,17 +1,17 @@
 $(function(){
-  function buildMessage(message){
-    let html = `<div class="upper-message">
-                  <div class="lower-message">
-                    ${message.content}
+  function buildHTML(message){
+    let html = `<div class="message">
+                  <div class="upper-message">
+                  ${message.content}
                   </div>
-                  <div class="upper-message__user-name">
-                    ${message.user_name}
+                  <div class="lower-message__user-name">
+                  ${message.user_name}
                   </div>
-                  <div class="upper-message__date">
-                    ${message.date}
+                  <div class="lower-message__date">
+                  ${message.date}
                   </div>
                 </div>`
-    return html;
+    $('.messages').append(html); 
   }
 
 
@@ -31,8 +31,7 @@ $(function(){
     })
     .done(function(message){
       console.log("成功");
-      let html = buildMessage(message);
-      $('.message').append(html)
+      buildHTML(message);   
       $('#message_content').val('')
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
