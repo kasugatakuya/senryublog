@@ -1,4 +1,8 @@
 class IinesController < ApplicationController
+  def index
+
+  end
+  
   def create
     @iine = current_user.iines.create(text_id: params[:text_id])
     redirect_back(fallback_location: texts_path)

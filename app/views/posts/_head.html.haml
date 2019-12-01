@@ -49,7 +49,7 @@
               = link_to "タイピング", users_path(current_user), class: 'btn'
           %li
             %a{:href => "#"} 
-              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+              = link_to "クイズ", text_iines_path(current_user), class: 'btn'
       %li
         = current_user.name
         %ul.dropdwn_menu

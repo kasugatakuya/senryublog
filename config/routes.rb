@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :texts, only: [:new, :create, :edit, :update, 
   :show, :index, :destroy] do
-    resources :iines, only: [:create, :destroy]
+    resources :iines, only: [:create, :destroy, :index]
   end
 
   resources :posts, only: [:new, :create, :edit, :update, :show, :index, :destroy] do
