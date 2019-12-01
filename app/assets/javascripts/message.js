@@ -34,6 +34,7 @@ $(function(){
       let html = buildMessage(message);
       $('.message').append(html)
       $('#message_content').val('')
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
       console.log("失敗");
