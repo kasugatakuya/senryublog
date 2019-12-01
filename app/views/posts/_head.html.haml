@@ -42,11 +42,11 @@
             %a{:href => "#"} 
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
       %li
-        川柳チャット
+        ゲーム
         %ul.dropdwn_menu
           %li
             %a{:href => "#"} 
-              = link_to "編集", edit_user_path(current_user), class: 'btn'
+              = link_to "タイピング", users_path(current_user), class: 'btn'
           %li
             %a{:href => "#"} 
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
