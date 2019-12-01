@@ -7,6 +7,11 @@ class TextsController < ApplicationController
     @text = Text.new
   end
 
+  def show
+    @text = Text.find(params[:id])
+    @iine = Iine.new
+  end
+
   def create
     Text.create(text_params)
     redirect_to texts_path(current_user)

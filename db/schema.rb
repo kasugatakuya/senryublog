@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191129074706) do
+ActiveRecord::Schema.define(version: 20191201051706) do
+
+  create_table "iines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "text_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["text_id"], name: "index_iines_on_text_id", using: :btree
+    t.index ["user_id"], name: "index_iines_on_user_id", using: :btree
+  end
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "post_id"
@@ -61,6 +70,8 @@ ActiveRecord::Schema.define(version: 20191129074706) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "iines", "texts"
+  add_foreign_key "iines", "users"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
   add_foreign_key "messages", "posts"

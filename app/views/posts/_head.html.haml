@@ -56,4 +56,7 @@
               = link_to "編集", edit_user_path(current_user), class: 'btn'
           %li
             %a{:href => "#"} 
+              = link_to "詳細", user_path(current_user), class: 'btn'
+          %li
+            %a{:href => "#"} 
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'

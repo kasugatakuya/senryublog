@@ -11,8 +11,14 @@
       .contents
         .content 
           = text.text
+        .syosai
+          = link_to "詳細", text_path(text)
         .date
           = text.created_at  
+        .iinecount
+          いいね数：
+          = text.iined_users.count
+
 
 
   

@@ -1,0 +1,29 @@
+.wrapper
+  = render "posts/head"
+
+
+.user-show
+%h1 ユーザー詳細ページ
+%h3
+  メールアドレス:
+  = @user.email
+%h2 川柳チャットお題投稿内容
+
+- @user.posts.each do |post|
+  %a{:href => "/posts/#{post.id}"}= post.text
+  %hr/
+%h3 いいねしているお題チャット
+- @user.liked_posts.each do |post|
+  = post.text
+  = post.user.name
+
+%h2 今日の川柳投稿内容
+- @user.texts.each do |text|
+  %a{:href => "/texts/#{text.id}"}= text.text
+  %hr/
+%h3 いいねしている今日の川柳
+- @user.iined_texts.each do |text|
+  = text.text
+  = text.user.name
+%p
+= link_to "ホームへ戻る", root_path
