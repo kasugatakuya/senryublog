@@ -1,0 +1,27 @@
+.wrapper
+  = render "posts/head"
+  = render "posts/foot"
+
+.today
+  .today__title
+    今日の川柳
+    %br
+    いいねランキング
+  .today__senryu
+    = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
+  .today__text
+    - @all_ranks.each.with_index(1) do |text, i|
+      .contents
+        .content
+          第 
+          = i
+          位 
+          %br 
+          = text.text
+        .syosai
+          = link_to "詳細", text_path(text)
+        .date
+          = text.created_at  
+        .iinecount
+          いいね数：
+          = text.iined_users.count

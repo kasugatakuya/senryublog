@@ -17,6 +17,10 @@ class TextsController < ApplicationController
     redirect_to texts_path(current_user)
   end
 
+  def edit
+    @all_ranks = Text.find(Iine.group(:text_id).order('count(text_id) desc').limit(5).pluck(:text_id))
+  end
+
   private
   def text_params
     params.require(:text).permit(:text).merge(user_id: current_user.id)

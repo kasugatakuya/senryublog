@@ -1,12 +1,20 @@
+.wrapper
+  = render "head"
+  = render "foot"
+
+
 .main
   .maintitle
     川柳チャット
     %br
-    新着順
-    /- @all_ranks.each do |post|
-    - @posts.each do |post|
+    いいねランキング
+    - @all_ranks.each.with_index(1) do |post, i|
       .contents
-        .content 
+        .content
+          第 
+          = i
+          位 
+          %br 
           = post.text
         .post-message
           = post.show_last_message
@@ -18,17 +26,3 @@
           = link_to "いいね数", post_path(post)
         .like
           = post.liked_users.count
-      
-
-
-          
-        
-  
-        
-     
-      
-
-        
-      
-
-  

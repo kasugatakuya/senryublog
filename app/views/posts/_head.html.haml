@@ -19,7 +19,10 @@
       %ul.dropdwn_menu
         %li
           %a{:href => "#"} 
-            = link_to "お題一覧", root_path, class: 'btn'
+            = link_to "新着順", root_path, class: 'btn'
+        %li
+          %a{:href => "#"} 
+            = link_to "ランキング", edit_post_path(current_user), class: 'btn'
         %li
           %a{:href => "#"} 
             = link_to "お題作成", new_post_path(current_user), class: 'btn'
@@ -28,7 +31,10 @@
       %ul.dropdwn_menu
         %li
           %a{:href => "#"} 
-            = link_to "一覧表示",texts_path(current_user), class: 'btn'
+            = link_to "新着順",texts_path(current_user), class: 'btn'
+        %li
+          %a{:href => "#"} 
+            = link_to "ランキング", edit_text_path(current_user), class: 'btn'
         %li
           %a{:href => "#"} 
             = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
@@ -37,10 +43,10 @@
         %ul.dropdwn_menu
           %li
             %a{:href => "#"} 
-              = link_to "編集", edit_user_path(current_user), class: 'btn'
+              = link_to "川柳チャット", edit_post_path(current_user), class: 'btn'
           %li
             %a{:href => "#"} 
-              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+              = link_to "今日の川柳", edit_text_path(current_user), class: 'btn'
       %li
         ゲーム
         %ul.dropdwn_menu

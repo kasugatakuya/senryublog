@@ -19,6 +19,10 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
+  end
+
  
 
   private
