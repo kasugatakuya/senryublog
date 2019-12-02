@@ -7,5 +7,5 @@
   .today-menu
     投稿画面
     = form_for(@text) do |f|
-      = f.text_field :text, class: 'text-box'
+      = f.text_field :text, class: 'text-box', placeholder: '5・7・5で入力してね！'
       = f.submit '投稿する', class: 'toko'
