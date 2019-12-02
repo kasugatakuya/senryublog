@@ -1,7 +1,8 @@
 #quiz {
-  background-color: #efdec1;
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/KAZ_P1020453_TP_V.jpg);
   font-size: 14px;
   font-family: Verdana, sans-serif;
+  padding-top: 81px;
 }
 
 #container {
@@ -11,7 +12,7 @@
   border-radius: 4px;
   padding: 16px;
   position: relative;
-  height: 635px;
+  height: 625px;
   border: 2px solid #ccc;
 }
 
@@ -51,7 +52,7 @@
 }
 
 #choices > li.correct::after {
-  content: ' ...correct!';
+  content: ' ...正解!';
 }
 
 #choices > li.wrong {
@@ -62,7 +63,7 @@
 }
 
 #choices > li.wrong::after {
-  content: ' ...wrong!';
+  content: ' ...不正解';
 }
 
 #btn, #result > a {
@@ -96,6 +97,7 @@
   border-radius: 4px;
   text-align: center;
   transition: 0.4s;
+  padding-top: 81px;
 }
 
 #result.hidden {

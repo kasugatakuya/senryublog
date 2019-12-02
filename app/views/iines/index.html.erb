@@ -1,3 +1,62 @@
+<div class = head>
+  <div class = title>
+    <a href = "/" class = btn>
+      川柳縛り
+    </a>
+  </div>
+  <div class = icon>
+    <div class = icon1>
+      <a href="/users/:id/edit" class = btn>ユーザー編集</a>
+    </div>
+    <div class = icon2>
+      <a href="/posts/new" class = btn>チャットお題作成</a>
+    </div>
+    <div class = icon3>
+      <a href="/texts/new" class = btn>今日の川柳投稿</a>
+    </div>
+  </div>
+</div>
+
+<div class = sidehead>
+  <ul class = dropdwn>
+    <li>川柳チャット
+      <ul class="dropdwn_menu">
+        <li><a href="/posts"class = btn>新着順</a></li>
+        <li><a href="/posts/:id/edit"class = btn>ランキング</a></li>
+        <li><a href="/posts/new"class = btn>お題投稿</a></li>
+      </ul>
+    </li>
+    <li>今日の川柳
+      <ul class="dropdwn_menu">
+        <li><a href="/texts"class = btn>新着順</a></li>
+        <li><a href="/texts/:id/edit"class = btn>ランキング</a></li>
+        <li><a href="/texts/new"class = btn>川柳投稿</a></li>
+      </ul>
+    </li>
+    <li>ランキング
+      <ul class="dropdwn_menu">
+        <li><a href="/posts/:id/edit"class = btn>川柳チャット</a></li>
+        <li><a href=" /texts/:id/edit"class = btn>今日の川柳</a></li>
+      </ul>
+    </li>
+    <li>ゲーム
+      <ul class="dropdwn_menu">
+        <li><a href="/users"class = btn>タイピング</a></li>
+        <li><a href="/texts/:text_id/iines"class = btn>クイズ</a></li>
+      </ul>
+    </li>
+    <li>ユーザー
+      <ul class="dropdwn_menu">
+        <li><a href="/users/:id/edit"class = btn>編集</a></li>
+        <li><a href="/"class = btn>詳細</a></li>
+        <li><a href="/"class = btn>ログアウト</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
 <div id="quiz">
   <section id="container">
     <p id="question"></p>
@@ -98,4 +157,20 @@
   });
 }
   </script>
+</div>
+
+
+
+<div class = footer>
+  <div class = foot>
+    <a href="https://www.facebook.com/" class = face>
+      <i class="fab fa-facebook-square"></i>
+    </a>
+    <a href="https://twitter.com/" class = twitter>
+      <i class="fab fa-twitter-square"></i>
+    </a>
+    <a href="https://www.instagram.com/" class = insta>
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
 </div>
