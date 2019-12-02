@@ -1,6 +1,6 @@
 //index.html.hamlのscss
 .today {
-  background-image: url(https://www.pakutaso.com/shared/img/thumb/PAK93_aozoraninobirusakura20140405_TP_V.jpg);
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/ELL86_teruyamakouyou1322_TP_V.jpg);
   background-attachment: fixed;
   text-align: center;
   padding-top: 100px;
@@ -8,6 +8,7 @@
   padding-bottom: 80px;
   &__title {
     font-size: 40px;
+    color: white;
   }
   &__senryu {
     margin-top: 20px;
@@ -15,8 +16,8 @@
     cursor: pointer;
     a{
       text-decoration: none;
-      color:black;
-      border: 3px solid black;
+      color: white;
+      border: 3px solid white;
       padding: 5px 20px;
       margin: 20px 20px;
       font-style: bold;
