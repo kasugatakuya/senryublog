@@ -1,144 +1,33 @@
-.wrapper
-  = render "posts/head"
-  = render "posts/foot"
+.single-header2
+  .single-header2__title
+    =link_to "/", class: "title__btn" do
+      = image_tag "https://s3.ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/event/2073/85a072ea32c9b997b3ece94d33131df7a316f31c.png", size: "200x100", alt: "test"
 
-#back
-  %section#main
-    %p#target
-      メソ打ち！
-      %br>/
-      〜クリックで開始〜
-    %p#info
-      正解数:
-      %span#score 0
-      ミス数:
-      %span#miss 0
-      残り時間:
-      %span#timer 0.00
-    :javascript
-      'use strict'
-      
-        {
-          const words = [
-            'ruby',
-            'javascript',
-            'jquery',
-            'rails',
-            'python',
-            'div',
-            'console.log',
-            'hello world',
-            'bundle install',
-            'document',
-            'puts',
-            'while',
-            'unity',
-            'body',
-            'head',
-            'let',
-            'function',
-            'string',
-            'import',
-            'before_action',
-            'has_many',
-            'belongs_to',
-            'input',
-            'label',
-            'render',
-            'create',
-            'index',
-            'remove',
-            'require',
-            'application',
-            'padding',
-            'resources',
-            'form_with',
-      
-          ];
-          let word;
-          let loc;
-          let score;
-          let miss;
-          const timeLimit = 30 * 1000;
-          let startTime;
-          let isPlaying = false
-      
-          const target = document.getElementById('target');
-          const scoreLabel = document.getElementById('score');
-          const missLabel = document.getElementById('miss');
-          const timerLabel = document.getElementById('timer');
-      
-          
-      
-          function updateTarget() {
-            let placeholder = '';
-            for (let i = 0; i <loc; i++) {
-              placeholder += '*';
-            }
-            target.textContent = placeholder + word.substring(loc);
-          }
-      
-          function updateTimer() {
-            const timeLeft = startTime + timeLimit - Date.now();
-            timerLabel.textContent = (timeLeft / 1000).toFixed(2);
-      
-            const timeoutId = setTimeout(() => {
-              updateTimer();
-            }, 10);
-      
-            if (timeLeft < 0) {
-              isPlaying = false;
-      
-              clearTimeout(timeoutId);
-              timerLabel.textContent = '0.00';
-              setTimeout(() => {
-                showResult();
-              }, 100);
-      
-              target.textContent = '〜クリックで開始〜';
-            }
-          }
-      
-          
-      
-          window.addEventListener('click', () => {
-            if (isPlaying ===true) {
-              return;
-            }
-            isPlaying = true;
-      
-            loc = 0;
-            score = 0;
-            miss = 0;
-            scoreLabel.textContent = score;
-            missLabel.textContent = miss;
-            word = words[Math.floor(Math.random() * words.length)];
-      
-            target.textContent = word;
-            startTime = Date.now();
-            updateTimer();
-          });
-      
-      
-          window.addEventListener('keydown', (e) => {
-            console.log(e.key);
-            if (isPlaying !== true) {
-              return;
-            }
-            if (e.key === word[loc]) {
-              console.log('score');
-              loc++;
-              if (loc === word.length) {
-                word = words[Math.floor(Math.random() * words.length)];
-                loc = 0;
-              }
-              updateTarget();
-              score++;
-              scoreLabel.textContent = score;
-            } else {
-              console.log('miss');
-              miss++;
-              missLabel.textContent = miss;
-            }
-          });
-        }
+
+.select2
+  .select2-content
+    .select2-content__title
+      会員情報入力
+    .select2-content__btn1
+      ニックネーム
+    .select2-content__btn2
+      メールドレス
+    .select2-content__btn3
+      本人確認
+    .select2-content__btn4
+      お名前(全角) 
+    .select2-content__btn5
+      お名前カナ(全角) 
+    .select2-content__btn6
+      生年月日
+
+.single-footer
+  .single-footer__content
+    プライバシーポリシー
+    メルカリ利用規約
+    特定商取引に関する表記
+  .single-footer__image
+    =link_to "/", class: "title__btn" do
+      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3230380584", size: "80x80", alt: "test"
+  .single-footer__text
+    © 2019 Mercari

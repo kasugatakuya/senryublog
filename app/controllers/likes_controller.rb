@@ -2,6 +2,9 @@ class LikesController < ApplicationController
   def index
     
   end
+  
+  def show
+  end
 
   def create
     @like = current_user.likes.create(post_id: params[:post_id])

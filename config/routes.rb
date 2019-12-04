@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
     end
-    resources :likes, only: [:create, :destroy, :index]
+    resources :likes, only: [:create, :destroy, :index, :show]
   end
 
   root to: "posts#index"
