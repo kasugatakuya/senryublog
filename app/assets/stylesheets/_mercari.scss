@@ -1,0 +1,73 @@
+.top-footer { 
+  background-image: url(https://pbs.twimg.com/media/DKYdeegVAAEJUO5.jpg);
+  height: 250px;
+  width: 100%;
+  .footer-content{
+    display: flex;
+    .footer-up {
+      position: relative;
+      left: 350px;
+      &__title1 {
+        color: white;
+        font-size: 24px;
+      }
+      &__title2 {
+        color: white;
+        font-size: 35px;
+      }
+      &__icon {
+        display: flex;
+      }
+      .footer-image {
+        position: absolute;
+        left: 430px;
+        top: 0;
+      }
+    }
+  }
+}
+
+
+.down-footer {
+  background-color: rgb(34, 34, 34);
+  height: 300px;
+  .footer-text {
+    display: flex;
+    background-color: rgb(34, 34, 34);
+    padding-left: 280px;
+    color: whitesmoke;
+    font-size: 12px;
+    .text1-list {
+      list-style-type: none;
+      text-align: left;
+    }
+    .text1-title {
+      font-size: 16px;
+      font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    }
+    .footer-text1__icon {
+      display: flex;
+      font-size: 30px;
+      &__1 {
+        margin: 5px 10px;
+      }
+      &__2 {
+        margin: 5px 10px;
+      }
+    }
+  }
+}
+
+.last-footer {
+  background-color: rgb(34, 34, 34);
+  height: 80px;
+  &__icon {
+    color: white;
+    padding-left: 290px;
+    padding-top: 10px;
+  }
+  &__text {
+    color: white;
+    text-align: center;
+  }
+}
