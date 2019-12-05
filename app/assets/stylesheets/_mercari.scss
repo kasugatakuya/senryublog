@@ -10,6 +10,7 @@
       &__title1 {
         color: white;
         font-size: 24px;
+        padding-top: 30px;
       }
       &__title2 {
         color: white;
@@ -17,6 +18,15 @@
       }
       &__icon {
         display: flex;
+        &__1 {
+          padding: 20px 10px;
+        }
+        &__2 {
+          padding: 0 10px;
+        }
+        &__3 {
+          padding: 0 10px;
+        }
       }
       .footer-image {
         position: absolute;
