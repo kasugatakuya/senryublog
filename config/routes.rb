@@ -17,6 +17,6 @@ Rails.application.routes.draw do
 
   root to: "posts#index"
 
-  resources :mercaris, only: [:index]
+  resources :mercaris, only: [:index, :new, :create, :show, :edit]
   
 end

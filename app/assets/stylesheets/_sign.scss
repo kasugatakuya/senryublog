@@ -67,8 +67,18 @@
    text-align: center;
    margin: 0 auto;
    &__content {
-     font-size: 15px;
+     font-size: 12px;
      padding-top: 150px;
+     display: inline-flex;
+     &__1 {
+       padding: 0 10px;
+     }
+     &__2 {
+       padding: 0 10px;
+     }
+     &__3 {
+       padding: 0 10px;
+     }
    }
    &__image {
     padding-top: 30px;

@@ -1,7 +1,7 @@
 .single-header
   .single-header__title
     =link_to "/", class: "title__btn" do
-      = image_tag "https://s3.ap-northeast-1.amazonaws.com/s3.techplay.jp/tp-images/event/2073/85a072ea32c9b997b3ece94d33131df7a316f31c.png", size: "200x100", alt: "test"
+      = image_tag "fmarket_logo_red.svg", size: "200x100", alt: "test"
 
 .select
   .select-content
@@ -14,16 +14,19 @@
       <i class="fab fa-facebook-square"></i>
       Fecebookで登録する
     .select-content__btn3
-      = image_tag "https://kokai.jp/wp/wp-content/uploads/2015/09/Google_favicon_2015.jpg", size: "15x15", alt: "test"
+      <i class="fab fa-google"></i>
       Googleで登録
 
 .single-footer
   .single-footer__content
-    プライバシーポリシー
-    メルカリ利用規約
-    特定商取引に関する表記
+    .single-footer__content__1
+      プライバシーポリシー
+    .single-footer__content__2
+      メルカリ利用規約
+    .single-footer__content__3
+      特定商取引に関する表記
   .single-footer__image
     =link_to "/", class: "title__btn" do
-      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3230380584", size: "80x80", alt: "test"
+      = image_tag "logo_gray.svg", size: "80x80", alt: "test"
   .single-footer__text
     © 2019 Mercari
