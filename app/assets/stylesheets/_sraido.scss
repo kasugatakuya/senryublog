@@ -1,0 +1,7 @@
+.slide {
+  display: none;
+}
+
+.active {/*.slide{...}よりも下に記述*/
+  display: block;
+}

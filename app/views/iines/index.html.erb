@@ -41,7 +41,7 @@
     </li>
     <li>ゲーム
       <ul class="dropdwn_menu">
-        <li><a href="/users"class = btn>タイピング</a></li>
+        <li><a href="/"class = btn>タイピング</a></li>
         <li><a href="/texts/:text_id/iines"class = btn>クイズ</a></li>
       </ul>
     </li>
@@ -78,11 +78,9 @@
   const scoreLabel = document.querySelector('#result > p');
 
   const quizSet = shuffle([
-    {q: 'Amazonの創設者は？' , c: ['ジェフ・ベゾス', 'イーロン・マスク', 'ラリー・ペイジ']},
-    {q: 'スクロールしても上部に固定されるCSSは？' , c: ['position: fixed;', 'position: absolute;', 'position: static;']},
-    {q: 'Rubyの開発者は？' , c: ['まつもとひろゆき', 'グイド・ヴァンロッサム', 'ラリー・ウォール']},
-    {q: 'iOSのアプリ開発に使われる言語は？' , c: ['Swift', 'Twist', 'iLanguage']},
-    {q: 'Webページで「&」と表示されるのは？' , c: ['&amp;', '&gt;', '&nbsp;']},
+    {q: '五・七・五・七・七の音で構成されるものは？' , c: ['短歌', '川柳', '俳句']},
+    {q: '俳句には必用だが川柳になくてもいいものは？' , c: ['季語', '口語', '字余り']},
+    {q: '川柳が生まれた時代は？' , c: ['江戸時代', '平安時代', '飛鳥時代']},
   ]);
   let currentNum = 0;
   let isAnswered;
