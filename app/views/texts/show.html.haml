@@ -12,10 +12,11 @@
     = @text.text
   .today-show__count
     いいね件数: #{@text.iines.count}
-    - if current_user.already_iined?(@text)
-      = button_to 'いいねを取り消す', text_iine_path(@text), method: :delete
-    - else
-      = button_to 'いいね', text_iines_path(@text)
+    - if user_signed_in?
+      - if current_user.already_iined?(@text)
+        = button_to 'いいねを取り消す', text_iine_path(@text), method: :delete
+      - else
+        = button_to 'いいね', text_iines_path(@text)
   .doday-show__iineuser
     いいねしたユーザー:
     - @text.iined_users.each do |user|

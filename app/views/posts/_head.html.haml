@@ -1,14 +1,20 @@
 .head
   .title
-    = link_to "川柳縛り", post_likes_path(current_user), class: 'btn'
+    = link_to "川柳縛り", root_path, class: 'btn'
   .icon
-    .icon1
-      = link_to edit_user_path(current_user) do
-        %div.btn= current_user.name
-    .icon2
-      = link_to "チャットお題作成", new_post_path(current_user), class: 'btn'
-    .icon3
-      = link_to "今日の川柳投稿", new_text_path(current_user), class: 'btn'
+    - if user_signed_in?
+      .icon1
+        = link_to edit_user_path(current_user) do
+          %div.btn= current_user.name
+      .icon2
+        = link_to "チャットお題作成", new_post_path(current_user), class: 'btn'
+      .icon3
+        = link_to "今日の川柳投稿", new_text_path(current_user), class: 'btn'
+    - else
+      .icon1
+        = link_to "ログイン", new_user_session_path, class: 'btn'
+      .icon2
+        = link_to "新規登録", new_user_registration_path, class: 'btn'
     
 
 
@@ -18,62 +24,53 @@
       川柳チャット
       %ul.dropdwn_menu
         %li
-          %a{:href => "#"} 
-            = link_to "新着順", root_path, class: 'btn'
-        %li
-          %a{:href => "#"} 
+          = link_to "新着順", root_path, class: 'btn'
+        - if user_signed_in?
+          %li
             = link_to "ランキング", edit_post_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
+          %li
             = link_to "お題作成", new_post_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
-            = link_to "メルカリ新規登録", users_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
-            = link_to "メルカリフット",  mercaris_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
-            = link_to "メルカリ商品紹介",  new_mercari_path(current_user), class: 'btn'
     %li
       今日の川柳
       %ul.dropdwn_menu
         %li
-          %a{:href => "#"} 
-            = link_to "新着順",texts_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
+          = link_to "新着順",texts_path, class: 'btn'
+        - if user_signed_in?
+          %li
             = link_to "ランキング", edit_text_path(current_user), class: 'btn'
-        %li
-          %a{:href => "#"} 
+          %li
             = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
       %li
         ランキング
         %ul.dropdwn_menu
-          %li
-            %a{:href => "#"} 
+          - if user_signed_in?
+            %li
               = link_to "川柳チャット", edit_post_path(current_user), class: 'btn'
-          %li
-            %a{:href => "#"} 
+            %li
               = link_to "今日の川柳", edit_text_path(current_user), class: 'btn'
       %li
         ゲーム
         %ul.dropdwn_menu
           %li
-            %a{:href => "#"} 
-              = link_to "タイピング", users_path(current_user), class: 'btn'
-          %li
-            %a{:href => "#"} 
+            = link_to "タイピング", root_path, class: 'btn'
+          - if user_signed_in?
+            %li
               = link_to "クイズ", text_iines_path(current_user), class: 'btn'
-      %li
-        = current_user.name
-        %ul.dropdwn_menu
-          %li
-            %a{:href => "#"} 
+      - if user_signed_in?
+        %li
+          = current_user.name
+          %ul.dropdwn_menu
+            %li
               = link_to "編集", edit_user_path(current_user), class: 'btn'
-          %li
-            %a{:href => "#"} 
+            %li
               = link_to "詳細", user_path(current_user), class: 'btn'
-          %li
-            %a{:href => "#"} 
+            %li
               = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      - else
+        %li
+          ユーザー登録
+          %ul.dropdwn_menu
+            %li
+              = link_to "ログイン", new_user_session_path, class: 'btn'
+            %li
+              = link_to "新規登録", new_user_registration_path, class: 'btn'
