@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: senryublog_production
-  username: senryublog
-  password: <%= ENV['SENRYUBLOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
