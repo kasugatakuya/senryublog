@@ -1,0 +1,107 @@
+.wrapper
+  = render "posts/head"
+  = render "posts/foot"
+  
+#quiz
+  %section#container
+    %p#question
+    #choices
+    #btn.disabled Next
+  %section#result.hidden
+    %p
+    %a{:href => ""} Replay?
+  :javascript
+    'use strict';
+    
+    {
+      const question = document.getElementById('question');
+      const choices = document.getElementById('choices');
+      const btn = document.getElementById('btn');
+      const result = document.getElementById('result');
+      const scoreLabel = document.querySelector('#result > p');
+    
+      const quizSet = shuffle([
+        {q: '五・七・五・七・七の音で構成されるものは？' , c: ['短歌', '川柳', '俳句']},
+        {q: '俳句には必用だが川柳になくてもいいものは？' , c: ['季語', '口語', '字余り']},
+        {q: '川柳が生まれた時代は？' , c: ['江戸時代', '平安時代', '飛鳥時代']},
+      ]);
+      let currentNum = 0;
+      let isAnswered;
+      let score = 0;
+    
+      
+    
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[j], arr[i]] = [arr[i], arr[j]];
+        }
+        return arr;
+      }
+    
+      function checkAnswer(li) {
+        if (isAnswered ===true) {
+          return;
+        }
+        isAnswered = true;
+        if (li.textContent === quizSet[currentNum].c[0]) {
+          li.classList.add('correct');
+          score++;
+        } else {
+          li.classList.add('wrong');
+        }
+    
+        btn.classList.remove('disabled');
+      }
+    
+      function setQuiz() {
+        isAnswered = false;
+    
+        question.textContent = quizSet[currentNum].q;
+    
+        while (choices.firstChild) {
+          choices.removeChild(choices.firstChild);
+        }
+    
+        const shuffledChoices = shuffle([...quizSet[currentNum].c]);
+        console.log(quizSet[currentNum].c);
+        shuffledChoices.forEach(choice => {
+          const li = document.createElement('li');
+          li.textContent = choice;
+          li.addEventListener('click', () => {
+            checkAnswer(li);
+          });
+          choices.appendChild(li);
+        });
+    
+        if (currentNum === quizSet.length - 1) {
+          btn.textContent = 'Show Score';
+        }
+      }
+    
+      setQuiz();
+    
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('disabled')) {
+          return;
+        }
+        btn.classList.add('disabled'); 
+    
+        if (currentNum === quizSet.length - 1) {
+          //console.log(`Score: ${score} / ${quizSet.length}`);
+          scoreLabel.textContent =`Score: ${score} / ${quizSet.length}`;
+          result.classList.remove('hidden');
+        } else {
+          currentNum++;
+          setQuiz();
+        }
+      });
+    }
+.footer
+  .foot
+    %a.face{:href => "https://www.facebook.com/", :target => "”_blank”"}
+      %i.fab.fa-facebook-square
+    %a.twitter{:href => "https://twitter.com/", :target => "”_blank”"}
+      %i.fab.fa-twitter-square
+    %a.insta{:href => "https://www.instagram.com/", :target => "”_blank”"}
+      %i.fab.fa-instagram

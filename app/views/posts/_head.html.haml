@@ -25,9 +25,9 @@
       %ul.dropdwn_menu
         %li
           = link_to "新着順", root_path, class: 'btn'
+        %li
+          = link_to "ランキング", step2_game_index_path(current_user), class: 'btn'
         - if user_signed_in?
-          %li
-            = link_to "ランキング", edit_post_path(current_user), class: 'btn'
           %li
             = link_to "お題作成", new_post_path(current_user), class: 'btn'
     %li
@@ -35,27 +35,25 @@
       %ul.dropdwn_menu
         %li
           = link_to "新着順",texts_path, class: 'btn'
+        %li
+          = link_to "ランキング", step3_game_index_path(current_user), class: 'btn'
         - if user_signed_in?
-          %li
-            = link_to "ランキング", edit_text_path(current_user), class: 'btn'
           %li
             = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
       %li
         ランキング
         %ul.dropdwn_menu
-          - if user_signed_in?
-            %li
-              = link_to "川柳チャット", edit_post_path(current_user), class: 'btn'
-            %li
-              = link_to "今日の川柳", edit_text_path(current_user), class: 'btn'
+          %li
+            = link_to "川柳チャット", step2_game_index_path(current_user), class: 'btn'
+          %li
+            = link_to "今日の川柳", step3_game_index_path(current_user), class: 'btn'
       %li
         ゲーム
         %ul.dropdwn_menu
           %li
             = link_to "タイピング", root_path, class: 'btn'
-          - if user_signed_in?
-            %li
-              = link_to "クイズ", text_iines_path(current_user), class: 'btn'
+          %li
+            = link_to "クイズ",  step1_game_index_path(current_user), class: 'btn'
       - if user_signed_in?
         %li
           = current_user.name
