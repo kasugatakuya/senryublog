@@ -1,4 +1,29 @@
-# senryublog DB設計
+# README　このアプリについて
+***
+
+## :bamboo:川柳縛りとは
+川柳投稿サイト。
+<br></br>
+投稿した川柳に「いいね」をつける事ができ、ランキング形式で表示できる。
+<br></br>
+お題を決めて5・7・5縛りでチャットする事ができる。
+<br></br>
+川柳クイズも楽しめる。
+
+## :memo:概要
+* アプリ名：川柳縛り
+* 使用言語：HTML/CSS/Ruby/Rails/JavaScript/MySQL/AWS/Github/Visual Studio Code
+* 機能：新規会員登録・ログイン機能・川柳投稿機能・いいね機能・ランキング機能・チャット機能(非同期通信・自動更新)・クイズ
+* 作業人数：1人（個人制作）
+* 作業期間：約2週間
+
+## :earth_africa:URL
+### URL：[http://18.178.3.27/](http://18.178.3.27/)
+
+## Githubリポジトリ
+### URL：[https://github.com/kasugatakuya/senryublog](https://github.com/kasugatakuya/senryublog)
+
+# :memo:DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
