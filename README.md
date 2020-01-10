@@ -86,3 +86,5 @@
 - belongs_to :text
 - belongs_to :user
 
+## :memo:ER図
+![fd6b664f63a9355f92e0f4070b26c52b](https://user-images.githubusercontent.com/57311079/72143814-c4735000-33da-11ea-9592-c33c4e79133a.png)
