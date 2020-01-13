@@ -45,7 +45,7 @@
 
 ![5ad6b663fb8cc474a6e7bebbcb97bfde](https://user-images.githubusercontent.com/57311079/72241909-6c7f5800-362b-11ea-9113-9a365a0718fb.gif)
 
-<h2 align="center">〜ユーザ情報〜</h2>
+<h2 align="center">〜ユーザー情報詳細〜</h2>
 <p align="center">自分の投稿した川柳やいいねした川柳を閲覧できる。</p>
 
 ![0a1f4db7bd6e879408c8fc223cbcb7dc](https://user-images.githubusercontent.com/57311079/72242156-0c3ce600-362c-11ea-9e35-5f20de6a2ec9.gif)
