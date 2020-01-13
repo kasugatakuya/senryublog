@@ -4,11 +4,15 @@
 ## :bamboo:川柳縛りとは
 川柳投稿サイト。
 <br></br>
-投稿した川柳に「いいね」をつける事ができ、ランキング形式で表示できる。
+ユーザー登録すれば川柳投稿や川柳チャットができる。（ユーザー登録しなくても閲覧はできる。）
+<br></br>
+投稿した川柳に「いいね」をつける事ができる。
 <br></br>
 お題を決めて5・7・5縛りでチャットする事ができる。
 <br></br>
-川柳クイズも楽しめる。
+新着順・古い順・ランキング順（いいね順）で表示できる。
+<br></br>
+川柳三択クイズも楽しめる。
 
 ## :memo:概要
 アプリ名：川柳縛り
@@ -23,6 +27,28 @@
 
 ## :earth_africa:URL
 ### URL：[http://18.178.3.27/](http://18.178.3.27/)
+
+## :computer:機能詳細
+
+<h2 align="center">〜川柳チャット〜</h2>
+<p align="center">5・7・5でチャットする事ができる。jQueryのAjaxによる非同期通信・自動更新機能あり。</p>
+
+![a9adddc754e61e041247f12406c8c458](https://user-images.githubusercontent.com/57311079/72241258-b6673e80-3629-11ea-8634-4ba70756dc00.gif)
+
+<h2 align="center">〜今日の川柳〜</h2>
+<p align="center">思いついた川柳をなんでも投稿できる。いいね機能があり、ランキング形式で表示できる。</p>
+
+![839566c3aa153d8aad123bcebc8be116](https://user-images.githubusercontent.com/57311079/72241594-88cec500-362a-11ea-9cee-e9741961cf08.gif)
+
+<h2 align="center">〜川柳三択クイズ〜</h2>
+<p align="center">川柳の歴史や特徴についての三択クイズを楽しめる。</p>
+
+![5ad6b663fb8cc474a6e7bebbcb97bfde](https://user-images.githubusercontent.com/57311079/72241909-6c7f5800-362b-11ea-9113-9a365a0718fb.gif)
+
+<h2 align="center">〜ユーザ情報〜</h2>
+<p align="center">自分の投稿した川柳やいいねした川柳を閲覧できる。</p>
+
+![0a1f4db7bd6e879408c8fc223cbcb7dc](https://user-images.githubusercontent.com/57311079/72242156-0c3ce600-362c-11ea-9e35-5f20de6a2ec9.gif)
 
 
 # :memo:DB設計
