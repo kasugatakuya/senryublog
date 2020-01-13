@@ -4,16 +4,35 @@
   padding-top: 100px;
   text-align: center;
   font-size: 30px;
+  .toko {
+    margin-top: 20px;
+    color:black;
+    background-color: olivedrab;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 2px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }
 
-.toko {
-  margin-top: 20px;
-  color:black;
-  background-color: olivedrab;
-  font-size: 20px;
-  display: block;
-  margin: 0 auto;
-  padding: 2px 10px;
-  margin-top: 10px;
-  cursor: pointer;
+.today-main {
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/ELL86_teruyamakouyou1322_TP_V.jpg);
+  height: 720px;
+  padding-top: 100px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  .toko {
+    margin-top: 20px;
+    color:black;
+    background-color: olivedrab;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    padding: 2px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }
