@@ -17,7 +17,7 @@
         .syosai
           = link_to "詳細", text_path(text)
         .date
-          = text.created_at  
+          = text.created_at.strftime("%Y/%m/%d %H:%M")
         .iinecount
           いいね数：
           = text.iined_users.count
