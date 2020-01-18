@@ -5,6 +5,7 @@
 川柳投稿サイト。
 ユーザー登録すれば川柳投稿や川柳チャットができる。（ユーザー登録しなくても閲覧はできる。）
 投稿した川柳に「いいね」をつける事ができる。
+投稿した川柳にコメントをつける事ができ、削除もできる。
 お題を決めて5・7・5縛りでチャットする事ができる。
 新着順・古い順・ランキング順（いいね順）で表示できる。
 川柳三択クイズも楽しめる。
@@ -132,5 +133,6 @@
 - belongs_to :user
 
 ## :memo:ER図
-![2a8be06f6d8d0a14f18e4da25d0a5b00](https://user-images.githubusercontent.com/57311079/72663860-814c5900-3a3a-11ea-890d-91adaec1fda4.png)
+![cca5589f1e754a46b4043a5e33b0ecce](https://user-images.githubusercontent.com/57311079/72663929-3e3eb580-3a3b-11ea-8ffb-af9d011935ed.png)
+
 
