@@ -28,6 +28,9 @@
       - @comments.each do |c|
         .today-show__comments__index__content
           = c.content
+          -if c.user_id == current_user.id
+            = link_to text_comment_path(@text, c), method: :delete do
+              %i.fas.fa-trash-alt
         .today-show__comments__index__name
           = c.user.name
     .today-show__comments__form
