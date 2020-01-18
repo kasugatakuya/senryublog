@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :iines, dependent: :destroy
   has_many :iined_texts, through: :iines, source: :text
 
-  has_many :messages
+  has_many :messages, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
 
   def already_liked?(post)
