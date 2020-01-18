@@ -10,6 +10,8 @@ class TextsController < ApplicationController
   def show
     @text = Text.find(params[:id])
     @iine = Iine.new
+    @comments = @text.comments
+    @comment = Comment.new
   end
 
   def create

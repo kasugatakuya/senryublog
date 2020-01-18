@@ -17,8 +17,26 @@
         = button_to 'いいねを取り消す', text_iine_path(@text), method: :delete
       - else
         = button_to 'いいね', text_iines_path(@text)
-  .doday-show__iineuser
+  .today-show__iineuser
     いいねしたユーザー:
     - @text.iined_users.each do |user|
       = user.name
+  .today-show__comments
+    .today-show__comments__title
+      コメント一覧
+    .today-show__comments__index
+      - @comments.each do |c|
+        .today-show__comments__index__content
+          = c.content
+        .today-show__comments__index__name
+          = c.user.name
+    .today-show__comments__form
+      - if user_signed_in?
+        = form_for [@text, @comment] do |f|
+          = f.text_field :content
+          %br/
+          = f.submit 'コメントする'
   = link_to "今日の川柳一覧へ戻る", texts_path
+
+
+
