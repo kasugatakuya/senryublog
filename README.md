@@ -37,6 +37,11 @@
 
 ![839566c3aa153d8aad123bcebc8be116](https://user-images.githubusercontent.com/57311079/72241594-88cec500-362a-11ea-9cee-e9741961cf08.gif)
 
+<h2 align="center">〜コメント機能＆削除機能〜</h2>
+<p align="center">投稿された川柳にコメントを書く事ができる。コメントの削除もできる。川柳投稿者は投稿した川柳の削除もできる。</p>
+
+![aaa4103c0a48d03a648adbae110693a4](https://user-images.githubusercontent.com/57311079/72663602-c3c06680-3a37-11ea-9782-637742f6f0cc.gif)
+
 <h2 align="center">〜川柳三択クイズ〜</h2>
 <p align="center">川柳の歴史や特徴についての三択クイズを楽しめる。</p>
 
@@ -47,13 +52,12 @@
 
 ![0a1f4db7bd6e879408c8fc223cbcb7dc](https://user-images.githubusercontent.com/57311079/72242156-0c3ce600-362c-11ea-9e35-5f20de6a2ec9.gif)
 
+
 ## :paperclip:追加したい機能
 * フォームを5・7・5に分割して分けて、バリデーションしっかり設定したい。
 * ユーザーランキング(いいね順）も表示できる様にしたい
-* 投稿した川柳（今日の川柳）にコメントできる様にしたい。
 * 川柳っぽくする為に縦書きで筆で書いた様に表示される様にしたい。(その際は横スクロール)
 * 詳細ページに行かなくてもいいねできる様にしたい。（非同期通信）（アイコンにする）
-* 削除機能つけたい（警告文も出す）
 * 検索機能つけたい
 
 # :memo:DB設計
@@ -83,7 +87,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|content|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
 ### Association
@@ -117,5 +121,16 @@
 - belongs_to :text
 - belongs_to :user
 
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|text_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :text
+- belongs_to :user
+
 ## :memo:ER図
-![fd6b664f63a9355f92e0f4070b26c52b](https://user-images.githubusercontent.com/57311079/72143814-c4735000-33da-11ea-9592-c33c4e79133a.png)
+![2a8be06f6d8d0a14f18e4da25d0a5b00](https://user-images.githubusercontent.com/57311079/72663860-814c5900-3a3a-11ea-890d-91adaec1fda4.png)
+
