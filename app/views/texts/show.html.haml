@@ -39,6 +39,10 @@
           = f.text_field :content
           %br/
           = f.submit 'コメントする'
+  .today-show__destroy
+    -if @text.user_id == current_user.id
+      = link_to text_path(@text),class: "booder", method: :delete, data: { confirm: '本当に削除しますか？' } do
+        .item-stop-btn 川柳を削除する
   = link_to "今日の川柳一覧へ戻る", texts_path
 
 
