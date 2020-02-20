@@ -4,18 +4,23 @@
 
 .today
   .today__title
-    今日の川柳
+    みんなの川柳
     %br
     古い順
-  .today__senryu
-    = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
+  - if user_signed_in?
+    .today__senryu
+      = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
   .today__text
     - @texts.each do |text|
       .contents
         .content 
           = text.text
-        .syosai
-          = link_to "詳細", text_path(text)
+        - if user_signed_in?
+          .syosai
+            = link_to "詳細", text_path(text)
+        -else
+          .syosai
+            = link_to "詳細", new_user_session_path
         .date
           = text.created_at  
         .iinecount

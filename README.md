@@ -33,7 +33,7 @@
 
 ![a9adddc754e61e041247f12406c8c458](https://user-images.githubusercontent.com/57311079/72241258-b6673e80-3629-11ea-8634-4ba70756dc00.gif)
 
-<h2 align="center">〜今日の川柳〜</h2>
+<h2 align="center">〜みんなの川柳〜</h2>
 <p align="center">思いついた川柳をなんでも投稿できる。いいね機能があり、ランキング形式で表示できる。</p>
 
 ![839566c3aa153d8aad123bcebc8be116](https://user-images.githubusercontent.com/57311079/72241594-88cec500-362a-11ea-9cee-e9741961cf08.gif)

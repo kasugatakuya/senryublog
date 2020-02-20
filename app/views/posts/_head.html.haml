@@ -9,7 +9,7 @@
       .icon2
         = link_to "チャットお題作成", new_post_path(current_user), class: 'btn'
       .icon3
-        = link_to "今日の川柳投稿", new_text_path(current_user), class: 'btn'
+        = link_to "みんなの川柳投稿", new_text_path(current_user), class: 'btn'
     - else
       .icon1
         = link_to "ログイン", new_user_session_path, class: 'btn'
@@ -33,7 +33,7 @@
           %li
             = link_to "お題作成", new_post_path(current_user), class: 'btn'
     %li
-      今日の川柳
+      みんなの川柳
       %ul.dropdwn_menu
         %li
           = link_to "新着順",texts_path, class: 'btn'
@@ -50,7 +50,7 @@
           %li
             = link_to "川柳チャット", step2_game_index_path(current_user), class: 'btn'
           %li
-            = link_to "今日の川柳", step3_game_index_path(current_user), class: 'btn'
+            = link_to "みんなの川柳", step3_game_index_path(current_user), class: 'btn'
       %li
         ゲーム
         %ul.dropdwn_menu

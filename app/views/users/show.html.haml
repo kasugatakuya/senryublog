@@ -22,12 +22,12 @@
     %br
 
   .user-show__today
-    今日の川柳投稿内容
+    みんなの川柳投稿内容
   - @user.texts.each do |text|
     %a{:href => "/texts/#{text.id}"}= text.text
     %hr/
   .user-show__todayiine 
-    いいねしている今日の川柳
+    いいねしているみんなの川柳
   - @user.iined_texts.each do |text|
     = text.text
     %br

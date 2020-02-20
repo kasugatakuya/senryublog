@@ -8,7 +8,7 @@
   background: whitesmoke;
 }
 
- .select {
+.select {
   display: block;
   margin: 0;
   padding: 0;
@@ -59,28 +59,28 @@
       margin: 20px 180px;
     }
   }
- }
+}
 
- .single-footer {
-   background: whitesmoke; 
-   height: 330px;
-   text-align: center;
-   margin: 0 auto;
-   &__content {
-     font-size: 12px;
-     padding-top: 150px;
-     display: inline-flex;
-     &__1 {
-       padding: 0 10px;
-     }
-     &__2 {
-       padding: 0 10px;
-     }
-     &__3 {
-       padding: 0 10px;
-     }
-   }
-   &__image {
-    padding-top: 30px;
-   }
- }
+.single-footer {
+  background: whitesmoke; 
+  height: 330px;
+  text-align: center;
+  margin: 0 auto;
+  &__content {
+    font-size: 12px;
+    padding-top: 150px;
+    display: inline-flex;
+    &__1 {
+      padding: 0 10px;
+    }
+    &__2 {
+      padding: 0 10px;
+    }
+    &__3 {
+      padding: 0 10px;
+    }
+  }
+  &__image {
+  padding-top: 30px;
+  }
+}
