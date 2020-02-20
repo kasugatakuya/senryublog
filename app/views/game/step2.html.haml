@@ -2,27 +2,27 @@
   = render "/posts/head"
   = render "/posts/foot"
 
-
-.main
-  .maintitle
-    川柳チャット
-    %br
-    いいねランキング
-    - @all_ranks.each.with_index(1) do |post, i|
-      .contents
-        .content
-          第 
-          = i
-          位 
-          %br 
-          = post.text
-        .post-message
-          = post.show_last_message
-        .date
-          = post.created_at  
-        .coment
-          = link_to "川柳投稿", post_messages_path(post)
-        .text  
-          = link_to "いいね数", post_path(post)
-        .like
-          = post.liked_users.count
+.back
+  .main
+    .maintitle
+      川柳チャット
+      %br
+      いいねランキング
+      - @all_ranks.each.with_index(1) do |post, i|
+        .contents
+          .content
+            第 
+            = i
+            位 
+            %br 
+            = post.text
+          .post-message
+            = post.show_last_message
+          .date
+            = post.created_at  
+          .coment
+            = link_to "川柳投稿", post_messages_path(post)
+          .text  
+            = link_to "いいね数", post_path(post)
+          .like
+            = post.liked_users.count

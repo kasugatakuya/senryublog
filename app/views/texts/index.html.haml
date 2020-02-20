@@ -18,6 +18,10 @@
         - if user_signed_in?
           .syosai
             = link_to "詳細", text_path(text)
+            -if text.user_id == current_user.id
+              = link_to text_path(text), method: :delete, data: { confirm: '本当に削除しますか？' } do
+                %i.fas.fa-trash-alt
+              
         -else
           .syosai
             = link_to "詳細", new_user_session_path
@@ -26,6 +30,9 @@
         .iinecount
           いいね数：
           = text.iined_users.count
+        
+        
+        
 
 
 
