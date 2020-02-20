@@ -20,7 +20,7 @@
 .form
   = form_for [@post, @message] do |f|
     .form__message
-      = f.text_field :content, class: 'form__message__text', placeholder: '5・7・5で入力（文字数7~22)'
+      = f.text_field :content, class: 'form__message__text', placeholder: 'こんにちは'
       -if user_signed_in?
         = f.submit '送信', class: 'form__submit'
       - else

@@ -23,9 +23,13 @@ class TextsController < ApplicationController
     @all_ranks = Text.find(Iine.group(:text_id).order('count(text_id) desc').limit(5).pluck(:text_id))
   end
 
+  def update
+  end
+
   def destroy
     @text = Text.find_by(id: params[:id], user_id: current_user.id)
     @text.destroy
+    flash.now[:alert] = "投稿を削除しました"
     redirect_to texts_path
   end
 

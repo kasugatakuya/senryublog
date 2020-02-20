@@ -1,0 +1,11 @@
+.wrapper
+  = render "posts/head"
+  = render "posts/foot"
+
+.today-main
+  みんなの川柳
+  .today-menu
+    編集画面
+    = form_for @text do |f|
+      = f.text_field :text, class: 'text-box', placeholder: '5・7・5で入力してね！'
+      = f.submit '編集する', class: 'toko'

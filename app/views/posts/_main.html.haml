@@ -1,20 +1,21 @@
-.main
-  .maintitle
-    川柳チャット
-    %br
-    新着順
-    /- @all_ranks.each do |post|
-    - @posts.each do |post|
-      .contents
-        .content 
-          = post.text
-        .post-message
-          = post.show_last_message
-        .date
-          = post.created_at.strftime("%Y/%m/%d %H:%M")
-        .coment
-          = link_to "川柳チャットする", post_messages_path(post)
-        .text  
-          = link_to "いいね数", post_path(post)
-        .like
-          = post.liked_users.count
+.back
+  .main
+    .maintitle
+      川柳チャット
+      %br
+      新着順
+      /- @all_ranks.each do |post|
+      - @posts.each do |post|
+        .contents
+          .content 
+            = post.text
+          .post-message
+            = post.show_last_message
+          .date
+            = post.created_at.strftime("%Y/%m/%d %H:%M")
+          .coment
+            = link_to "川柳チャットする", post_messages_path(post)
+          .text  
+            = link_to "いいね数", post_path(post)
+          .like
+            = post.liked_users.count
