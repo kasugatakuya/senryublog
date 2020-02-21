@@ -21,31 +21,21 @@
   }
   .icon {
     color: white;
-    font-size: 20px;
     display: flex;
     .icon1 {
-      border: 1px solid white;
-      padding: 0 20px;
-      margin: 10px 20px;
       .btn {
         color: white;
         text-decoration-line: underline;
         text-decoration-color: black;
-      }
-    }
-    .icon2 {
-      border: 1px solid white;
-      padding: 0 20px;
-      margin: 10px 20px;
-      .btn {
+        border: 1px solid white;
+        padding: 17px 10px;
+        line-height: 50px;
         text-decoration: none;
-        color: white;
       }
-    }
-    .icon3 {
-      border: 1px solid white;
-      padding: 0 20px;
-      margin: 10px 20px;
+      .btn:hover {
+        background-color: white;
+        color: black;
+      }
     }
   }
 }
@@ -54,7 +44,7 @@
 .dropdwn{
   z-index: 1;
   position: fixed;
-  max-width: 1450px;
+  width: 100%;
   padding-top: 51px;
   display: flex;
   justify-content: space-evenly;
@@ -68,16 +58,19 @@ ul{
   margin: 0 auto;
   padding: 0;
 }
+
 li{
   max-width: calc(1450px/5);
+  width: 100%;
   position: relative;
   padding: 5px;
   display: block;
   cursor: pointer;
 }
 
+
+
 .dropdwn>li{
-  width: 1450px;
   margin: 1px;
   background: black;
   display: inline;

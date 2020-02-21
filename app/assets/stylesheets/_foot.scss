@@ -2,31 +2,30 @@
   z-index: 1;
   position: fixed;
   background: black;
-  height: 65px;
+  height: 100px;
   width: 100%;
   bottom: 0;
 }
 
 .foot {
   text-align: center;
-  line-height: 65px;
+  line-height: 100px;
+  width: 100%;
 }
 
 .face {
   font-size:40px;
   color:#fff;
   text-decoration: none;
-  margin: 0 70px;
 }
 .twitter {
   font-size:40px;
   color:#fff;
   text-decoration: none;
-  margin: 0 70px;
+  padding: 0 30px;
 }
 .insta {
   font-size:40px;
   color:#fff;
   text-decoration: none;
-  margin: 0 70px;
 }

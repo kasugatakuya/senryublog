@@ -4,16 +4,16 @@
   .icon
     - if user_signed_in?
       .icon1
-        = link_to edit_user_path(current_user) do
-          %div.btn= current_user.name
-      .icon2
-        = link_to "チャットお題作成", new_post_path(current_user), class: 'btn'
-      .icon3
-        = link_to "みんなの川柳投稿", new_text_path(current_user), class: 'btn'
+        = link_to edit_user_path(current_user), class:"btn" do
+          = current_user.name
+      .icon1
+        = link_to "チャット作成", new_post_path(current_user), class: 'btn'
+      .icon1
+        = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
     - else
       .icon1
         = link_to "ログイン", new_user_session_path, class: 'btn'
-      .icon2
+      .icon1
         = link_to "新規登録", new_user_registration_path, class: 'btn'
     
 
