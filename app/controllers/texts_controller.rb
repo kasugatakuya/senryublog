@@ -1,10 +1,12 @@
 class TextsController < ApplicationController
   def index
     @texts = Text.all.order(id: "DESC")
+    @iine = Iine.new
   end
 
   def new
     @text = Text.new
+    
   end
 
   def show

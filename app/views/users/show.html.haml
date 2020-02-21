@@ -16,7 +16,7 @@
     %a{:href => "/posts/#{post.id}"}= post.text
     %hr/
   .user-show__iine
-    いいねしてい川柳チャット
+    いいねしている川柳チャット
   - @user.liked_posts.each do |post|
     = post.text 
     %br
