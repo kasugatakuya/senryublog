@@ -11,19 +11,11 @@ class GameController < ApplicationController
   end
 
   def step4
-    @posts = Post.all.order(:id)
+    @posts = Post.all.order(:id).page(params[:page]).per(5)
   end
 
   def step5
-    @texts = Text.all.order(:id)
-  end
-
-  def step6
-    @all_ranks = Text.find(Iine.group(:text_id).order('count(text_id) desc').limit(5).pluck(:text_id))
-  end
-
-  def step7
-    @all_ranks = Text.find(Iine.group(:text_id).order('count(text_id) desc').limit(5).pluck(:text_id))
+    @texts = Text.all.order(:id).page(params[:page]).per(5)
   end
 
 end

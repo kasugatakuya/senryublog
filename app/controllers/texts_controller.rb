@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.all.order(id: "DESC")
+    @texts = Text.all.order(id: "DESC").page(params[:page]).per(5)
     @iine = Iine.new
   end
 
