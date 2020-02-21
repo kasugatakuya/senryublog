@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy, :index, :show]
   end
 
-  root to: "posts#index"
+  root to: "texts#index"
 
   resources :mercaris, only: [:index, :new, :create, :show, :edit]
 

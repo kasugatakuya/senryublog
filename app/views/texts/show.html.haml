@@ -6,17 +6,21 @@
 .today-show
   .today-show__title
     みんなの川柳投稿詳細ページ
-  .today-show__user
-    = @text.user.name
   .today-show__text
     = @text.text
+  .today-show__user
+    = @text.user.name
   .today-show__count
-    いいね件数: #{@text.iines.count}
     - if user_signed_in?
       - if current_user.already_iined?(@text)
-        = button_to 'いいねを取り消す', text_iine_path(@text), method: :delete
+        = link_to text_iine_path(@text), method: :delete, id: "iine" do
+          -# いいね件数: #{@text.iines.count}
+          %i.fas.fa-heart  
+        #{@text.iines.count}
       - else
-        = button_to 'いいね', text_iines_path(@text)
+        = link_to text_iines_path(@text), method: :post, id: "iine2" do
+          %i.far.fa-heart  
+        #{@text.iines.count}
   .today-show__iineuser
     いいねしたユーザー:
     - @text.iined_users.each do |user|

@@ -4,6 +4,8 @@
 .messages
   .messages_title
     = @post.text
+  - @post.liked_users.each do |user|
+    = user.name
   - @messages.each do |message|
     .message{"data-message-id": "#{message.id}"}
       .upper-message
