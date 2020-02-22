@@ -33,7 +33,7 @@
         .today-show__comments__index__content
           = c.content
           -if c.user_id == current_user.id
-            = link_to text_comment_path(@text, c), method: :delete do
+            = link_to text_comment_path(@text, c), method: :delete,class: "link1" do
               %i.fas.fa-trash-alt
         .today-show__comments__index__name
           = c.user.name
@@ -45,9 +45,9 @@
           = f.submit 'コメントする'
   .today-show__destroy
     -if @text.user_id == current_user.id
-      = link_to text_path(@text),class: "booder", method: :delete, data: { confirm: '本当に削除しますか？' } do
-        .item-stop-btn 川柳を削除する
-  = link_to "みんなの川柳一覧へ戻る", texts_path
+      = link_to "川柳を削除",text_path(@text),class: "link1", method: :delete, data: { confirm: '本当に削除しますか？' }
+      = link_to "川柳を編集", edit_text_path(@text),class: "link1"
+  = link_to "みんなの川柳一覧へ戻る", texts_path,class: "link1"
 
 
 
