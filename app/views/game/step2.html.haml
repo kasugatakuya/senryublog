@@ -20,10 +20,9 @@
             = post.show_last_message
           .date
             = post.created_at  
-          .coment
-            = link_to "チャットする", post_messages_path(post)
+          .comment
+            = link_to "川柳チャットする", post_messages_path(post),class: "link2"
           .text  
-            = link_to "いいね数", post_path(post)
-          .like
+            = link_to "いいね数", post_path(post),class: "link2"
             = post.liked_users.count
       

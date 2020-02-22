@@ -22,10 +22,13 @@ class TextsController < ApplicationController
   end
 
   def edit
-    @all_ranks = Text.find(Iine.group(:text_id).order('count(text_id) desc').limit(5).pluck(:text_id))
+    @text = Text.find_by(id: params[:id])
   end
-
   def update
+    # binding.pry
+    @text = Text.find_by(id: params[:id])
+    @text.update(text_params)
+    redirect_to text_path(id: @text.id)
   end
 
   def destroy
