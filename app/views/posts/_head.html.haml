@@ -10,14 +10,18 @@
         = link_to "チャット作成", new_post_path(current_user), class: 'btn'
       .icon1
         = link_to "川柳投稿", new_text_path(current_user), class: 'btn'
+      #burger.head__menu.head__bar__box2__text2
+        %i.fas.fa-bars
     - else
       .icon1
         = link_to "ログイン", new_user_session_path, class: 'btn'
       .icon1
         = link_to "新規登録", new_user_registration_path, class: 'btn'
+      
+
     
 
-
+-# ドロップダウンメニュー
 .sidehead
   %ul.dropdwn
     %li
@@ -74,3 +78,69 @@
               = link_to "ログイン", new_user_session_path, class: 'btn'
             %li
               = link_to "新規登録", new_user_registration_path, class: 'btn'
+
+-# バーガーメニューの内容
+.burger
+  .burger-menu
+    .close2
+      %i.fas.fa-times
+      閉じる
+    .burger-menu__title
+      川柳チャット
+      .burger-menu__title__list
+        = link_to "新着順",texts_path, class: "menulist"
+        = link_to "古い順", step5_game_index_path(current_user), class: "menulist"
+        = link_to "ランキング", step3_game_index_path(current_user), class: "menulist"
+        - if user_signed_in?
+          = link_to "川柳投稿", new_text_path(current_user), class: "menulist"
+    .burger-menu__title
+      みんなの川柳
+      .burger-menu__title__list
+        = link_to "新着順",texts_path, class: "menulist"
+        = link_to "古い順", step5_game_index_path(current_user), class: "menulist"
+        = link_to "ランキング", step3_game_index_path(current_user), class: "menulist"
+        - if user_signed_in?
+          = link_to "川柳投稿", new_text_path(current_user), class: "menulist"
+    .burger-menu__title
+      ランキング
+      .burger-menu__title__list
+        = link_to "川柳チャット", step2_game_index_path(current_user), class: "menulist"
+        = link_to "みんなの川柳", step3_game_index_path(current_user), class: "menulist"
+    .burger-menu__title
+      ゲーム
+      .burger-menu__title__list
+        = link_to "クイズ",  step1_game_index_path(current_user), class: "menulist"
+    .burger-menu__title
+      - if user_signed_in?
+        = current_user.name
+        .burger-menu__title__list
+          = link_to "編集", edit_user_path(current_user), class: "menulist"
+          = link_to "詳細", user_path(current_user), class: "menulist"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "menulist"
+      - else
+        ユーザー登録
+        .burger-menu__title__list
+          = link_to "ログイン", new_user_session_path, class: "menulist"
+          = link_to "新規登録", new_user_registration_path, class: "menulist"
+
+      
+    .burger-menu__title
+      このサイトについて
+    .commentbox
+      .commentbox__human
+        = image_tag "human.JPG", alt: "Rails icon", id: "pic1", class: "imghuman"
+        %p.human-name KASUGA
+      .commentbox__box
+        .commentbox__box__text
+          思いついた川柳を投稿してみよう♪「いいね」がもらえるかも！
+          川柳チャットで川柳について語り合えるよ♪
+          クイズもあるよ！
+    .main__right__tag
+      
+    .close3
+      %i.fas.fa-times
+      閉じる
+
+-# トップスクロール
+.gotop
+  %i.fas.fa-chevron-up

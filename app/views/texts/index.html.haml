@@ -9,7 +9,7 @@
     新着順
   - if user_signed_in?
     .today__senryu
-      = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
+      = link_to "川柳を投稿", new_text_path(current_user), class: 'btn5'
   .today__text
     - @texts.each do |text|
       .contents
