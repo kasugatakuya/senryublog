@@ -9,7 +9,7 @@
     いいねランキング
   .today__senryu
     - if user_signed_in?
-      = link_to "川柳を投稿", new_text_path(current_user), class: 'btn'
+      = link_to "川柳を投稿", new_text_path(current_user), class: 'btn5'
   .today__text
     - @all_ranks.each.with_index(1) do |text, i|
       .contents

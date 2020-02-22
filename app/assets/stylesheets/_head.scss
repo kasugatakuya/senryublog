@@ -41,6 +41,8 @@
 }
 
 
+
+// ドロップダウンメニュー
 .dropdwn{
   z-index: 1;
   position: fixed;
@@ -105,4 +107,169 @@ li a:hover{
 .btn {
   text-decoration: none;
   color: #fff;
+}
+
+
+
+
+// ハンバーガーメニュー
+#burger {
+  color: white;
+  font-size: 30px;
+  padding: 10px 10px;
+}
+
+
+// ハンバーガーメニューの中身
+.burger {
+  position: fixed;
+  /* padding-top: 310px; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  /* display: none;を追加してください */
+  display: none;
+  overflow: scroll;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.burger-menu {
+  width: 100%;
+  max-width: 680px;
+  margin: 10px auto;
+  background-color: #FFFFFF;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.close2 {
+  text-align: center;
+  color: #95979C;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.close2:hover {
+  color: black;
+}
+
+.close3 {
+  text-align: center;
+  color: #95979C;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  padding-top: 50px;
+}
+.close3:hover {
+  color: black;
+}
+
+.commentbox {
+  display: flex;
+  padding-top: 20px;
+  margin-top: -60px;
+}
+
+.commentbox__human {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.imghuman {
+  border-radius: 100px;
+  height: 60px;
+  width: 70px;
+  /* background-size: center; */
+}
+
+.human-name {
+  font-size: 10px;
+}
+
+.commentbox__box__text {
+  font-size: 16px;
+  line-height: 23px;
+  color: #858585;
+  display: inline-block;
+  position: relative; 
+  padding: 17px 13px;
+  border-radius: 8px;
+  border: 3px solid #EEEEEE;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.commentbox__box__text::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #EEEEEE;
+}
+
+.burger-menu__title {
+  background-color: black;
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 45px;
+  border-radius: 4px;
+  height: 45px;
+  padding-left: 10px;
+  margin: 80px 0;
+}
+
+.burger-menu__title__list {
+  margin-top: 20px;
+}
+
+.menulist {
+  text-decoration: none;
+  border: 1px solid silver;
+  color: white;
+  font-size: 15px;
+  background-color: silver;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+.menulist:hover {
+  background-color: black;
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+// トップスクロール
+.gotop {
+  color: black;
+  background-color: silver;
+  height: 55px;
+  line-height: 55px;
+  width: 55px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 100px;
 }
