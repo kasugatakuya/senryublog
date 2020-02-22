@@ -6,14 +6,15 @@
 }
 
 #container {
-  width: 600px;
   margin: 8px auto;
   background: #fff;
   border-radius: 4px;
   padding: 16px;
+  box-sizing: border-box;
   position: relative;
   height: 625px;
   border: 2px solid #ccc;
+  width: min(600px,100%);
 }
 
 #question {
@@ -25,19 +26,22 @@
 
 #choices {
   list-style: none;
-  padding: 0;
   margin-bottom: 16px;
   text-align: center;
+  width: 100%;
 }
 
 #choices > li {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 15px 155px 15px 155px;
-  margin-bottom: 10px;
+  width: 100%;
   cursor: pointer;
   font-size: 20px;
-
+  margin: 5px auto;
+  box-sizing: border-box;
+  padding: 10px 0;
+  display: inline-block;
+  max-width: 580px;
 }
 
 #choices > li:hover {
@@ -68,13 +72,14 @@
 
 #btn, #result > a {
   background: #3498bd;
-  padding: 8px;
   border-radius: 4px;
   cursor: pointer;
+  padding: 10px 0;
   text-align: center;
   color: #fff;
   box-shadow:  0 4px 0 #2880b9;
   font-size: 20px;
+  width: min(580px,100%);
 }
 
 #btn.disabled {
@@ -86,7 +91,7 @@
 
 #result {
   position: absolute;
-  width: 300px;
+  width: min(300px,100%);
   background: #fff;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

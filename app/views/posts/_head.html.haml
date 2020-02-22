@@ -17,7 +17,8 @@
         = link_to "ログイン", new_user_session_path, class: 'btn'
       .icon1
         = link_to "新規登録", new_user_registration_path, class: 'btn'
-      
+      #burger.head__menu.head__bar__box2__text2
+        %i.fas.fa-bars
 
     
 
@@ -92,7 +93,7 @@
         = link_to "古い順", step5_game_index_path(current_user), class: "menulist"
         = link_to "ランキング", step3_game_index_path(current_user), class: "menulist"
         - if user_signed_in?
-          = link_to "川柳投稿", new_text_path(current_user), class: "menulist"
+          = link_to "チャットお題作成", new_post_path(current_user), class: "menulist"
     .burger-menu__title
       みんなの川柳
       .burger-menu__title__list

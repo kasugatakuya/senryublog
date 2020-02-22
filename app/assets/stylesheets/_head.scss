@@ -43,6 +43,13 @@
 
 
 // ドロップダウンメニュー
+
+@media (max-width: 766px) {
+  .sidehead {
+    display: none;
+  }
+}
+
 .dropdwn{
   z-index: 1;
   position: fixed;
