@@ -15,6 +15,7 @@ ul {
   margin: 0 auto;
   color: black;
   padding: 150px 0;
+  box-sizing: border-box;
 }
 
 .slide-title {
@@ -23,7 +24,8 @@ ul {
 }
 
 .change-btn-wrapper {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   margin: 20px auto;
   font-size: 18px;
 }
@@ -58,7 +60,8 @@ ul {
 }
 
 .slide img {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: auto;
   border-radius: 5px;
 }
@@ -99,6 +102,7 @@ ul {
   color: #333333;
   font-weight: bold;
   padding-bottom: 150px;
+  box-sizing: border-box;
 }
 
 .container19-title1 {
