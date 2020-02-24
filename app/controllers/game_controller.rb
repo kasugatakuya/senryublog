@@ -18,4 +18,7 @@ class GameController < ApplicationController
     @texts = Text.all.order(:id).page(params[:page]).per(5)
   end
 
+  def top
+  end
+
 end

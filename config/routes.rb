@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy, :index, :show]
   end
 
-  root to: "texts#index"
+  root to: "game#top"
 
   resources :mercaris, only: [:index, :new, :create, :show, :edit]
 
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       get 'step3'
       get 'step4' 
       get 'step5' 
-      get 'done' 
+      get 'top' 
     end
   end
   
