@@ -1,0 +1,69 @@
+.wrapper
+  = render "posts/head"
+  = render "posts/foot"
+
+.slide-wrapper
+  %h2.slide-title 川柳縛り
+  .change-btn-wrapper
+    .change-btn.prev-btn ← 前へ
+    .change-btn.next-btn 次へ →
+  %ul.slides
+    %li.slide.active
+      = link_to image_tag("img1.jpg", alt: "サンプル画像",class: "simg"), texts_path
+    %li.slide
+      = link_to image_tag("img2.jpg", alt: "サンプル画像",class: "simg"), posts_path
+    %li.slide
+      = link_to image_tag("img3.jpg", alt: "サンプル画像",class: "simg"), step1_game_index_path
+  .index-btn-wrapper
+    .index-btn みんなの川柳
+    .index-btn 川柳チャット
+    .index-btn 川柳クイズ
+
+.container19
+  .container19-title1
+    %i.fab.fa-quora
+    川柳縛りとは
+  .container19-content
+    %ul.accordion1
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          川柳縛りとは?
+        %ul.inner
+          %li.content1-1 川柳投稿サイト。 川柳投稿や川柳チャットができます。 投稿した川柳に「いいね」やコメントをつける事もできランキング順（いいね順）で表示できます。 川柳三択クイズも楽しめます。
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          なぜ作ったか？
+        %ul.inner
+          %li.content1-1 雑誌の応募企画などに、川柳を投稿するのが好きだったので作りました。自分の投稿した川柳が雑誌に掲載された時は嬉しかった事もあり、自分の川柳が評価される機能をつけたいと思い、いいね機能をつけてランキングで表示できる様にしました。 川柳チャットでは川柳に関連したお題を決めてチャットしたら、面白いやりとりができるのではないかと思ったので作りました。 また、川柳をもっと知りたい、学びたいと思う人の為にクイズも作りました。
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          川柳チャットとは？
+        %ul.inner
+          %li.content1-1 チャットのお題を作成するとその中で、お題に関連したチャットをする事ができます。非同期通信と自動更新なのでリアルタイムでチャットができます。LINEや2chの川柳バージョンだと思ってもらえればいいです。ログインすれば使えます。
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          みんなの川柳とは？
+        %ul.inner
+          %li.content1-1 川柳を投稿する事ができます。川柳には「いいね」をつける事ができて、ランキングで表示されます。みんなに「いいね」してもらえるように、センスある川柳をどんどん投稿しましょう。
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          川柳クイズとは？
+        %ul.inner
+          %li.content1-1 川柳についての雑学クイズです。あなたは何問正解できるかな？
+      %li
+        %p.ac1
+          %span.blue
+            %i.far.fa-question-circle
+          他にどんな機能があるの？
+        %ul.inner
+          %li.content1-1 ユーザー詳細ページで自分が投稿した川柳や「いいね」した川柳を確認する事ができます。

@@ -19,6 +19,9 @@
       color: white;
     }
   }
+  #headtitle:hover {
+    color: rgb(196, 96, 96);
+  }
   .icon {
     color: white;
     display: flex;
@@ -69,7 +72,7 @@ ul{
 }
 
 li{
-  max-width: calc(1450px/5);
+  // max-width: calc(1450px/5);
   width: 100%;
   position: relative;
   padding: 5px;
